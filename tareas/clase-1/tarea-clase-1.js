@@ -3,50 +3,50 @@
 // Preguntarle estos datos al usuario y guardarlos en 2 variables
 // Ejecutar la función con estos datos
 // Impriman el resultado en la consola
-function calcularEdad(anioActual, anioNacimiento) {
-    return anioActual - anioNacimiento;
-}
+// function calcularEdad(anioActual, anioNacimiento) {
+//     return anioActual - anioNacimiento;
+// }
 
-const anioActual = Number(prompt("Cuál es el año actual?"));
-const anioNacimiento = Number(prompt("En qué año naciste?"));
+// const anioActual = Number(prompt("Cuál es el año actual?"));
+// const anioNacimiento = Number(prompt("En qué año naciste?"));
 
-console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
+// console.log('Tenés ' + calcularEdad(anioActual, anioNacimiento) + ' años');
 
 // Preguntar el salario anual y calcular el salario mensual
 // Preguntar el salario mensual y calcular el anual
 // diario... semanal, por hora. etc.
 
-function calcularSalarioAnual(salarioMensual) {
-    const cantidadMesesEnUnAnio = 12;
-    return salarioMensual * cantidadMesesEnUnAnio;
-}
+// function calcularSalarioAnual(salarioMensual) {
+//     const cantidadMesesEnUnAnio = 12;
+//     return salarioMensual * cantidadMesesEnUnAnio;
+// }
 
-function calcularSalarioMensual(salarioAnual) {
-    const cantidadMesesEnUnAnio = 12;
-    return salarioAnual / cantidadMesesEnUnAnio;
-}
+// function calcularSalarioMensual(salarioAnual) {
+//     const cantidadMesesEnUnAnio = 12;
+//     return salarioAnual / cantidadMesesEnUnAnio;
+// }
 
-function calcularSalarioSemanal(salarioAnual) {
-    const cantidadSemanasEnUnAnio = 52;
-    return salarioAnual / cantidadSemanasEnUnAnio;
-}
+// function calcularSalarioSemanal(salarioAnual) {
+//     const cantidadSemanasEnUnAnio = 52;
+//     return salarioAnual / cantidadSemanasEnUnAnio;
+// }
 
-function calcularSalarioDiario(salarioAnual) {
-    const cantidadDiasEnUnAnio = 365;
-    return salarioAnual / cantidadDiasEnUnAnio;
-}
+// function calcularSalarioDiario(salarioAnual) {
+//     const cantidadDiasEnUnAnio = 365;
+//     return salarioAnual / cantidadDiasEnUnAnio;
+// }
 
-const salarioMensual = Number(prompt('Cuál es tu salario mensual?'));
-console.log('Tu salario anual es ' + calcularSalarioAnual(salarioMensual));
+// const salarioMensual = Number(prompt('Cuál es tu salario mensual?'));
+// console.log('Tu salario anual es ' + calcularSalarioAnual(salarioMensual));
 
-const salarioAnual = Number(prompt('Cuál es tu salario mensual?'));
-console.log('Tu salario mensual es ' + calcularSalarioMensual(salarioAnual));
-console.log('Tu salario semanal es ' + calcularSalarioSemanal(salarioAnual));
-console.log('Tu salario diario es ' + calcularSalarioDiario(salarioAnual));
+// const salarioAnual = Number(prompt('Cuál es tu salario mensual?'));
+// console.log('Tu salario mensual es ' + calcularSalarioMensual(salarioAnual));
+// console.log('Tu salario semanal es ' + calcularSalarioSemanal(salarioAnual));
+// console.log('Tu salario diario es ' + calcularSalarioDiario(salarioAnual));
 
 /// SCOPE
 
-// Variable hoisting -> izar
+// Variable hoisting -> izar, lo "traslada, lo iza arriba de todo"
 // console.log(hola); //Falla porque no está definida
 
 // console.log(mensaje); //No falla, pero muestra undefined... por qué?
@@ -62,17 +62,17 @@ console.log('Tu salario diario es ' + calcularSalarioDiario(salarioAnual));
 /*
 pruebaHoisting(); //funciona!
 function pruebaHoisting(){
-    console.log('prueba');
-}
-//pruebaHoisting();
-*/
+    console.log('prueba');
+} */
+// pruebaHoisting();
 
-/*
+//Ejemplo SCOPE:
+
 var a = 1; //global
 let b = 2; //global
 
 function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
-    let d = 4; //local a la función
+    let d = 4; //variable local a la función
 
     if(c === 3){
         var e = 5; // por hoisting termina siendo local a la función
@@ -85,21 +85,23 @@ function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
         console.log('e dentro del if vale: ' + e); // 5
         console.log('f dentro del if vale: ' + f); // 6
     }
-
+    
     console.log('a dentro de la funcion pero fuera del if, vale: ' + a); // 1
     console.log('b dentro de la funcion pero fuera del if, vale: ' + b); // 2
     console.log('c dentro de la funcion pero fuera del if, vale: ' + c); // lo que sea que le pasen a prueba
     console.log('d dentro de la funcion pero fuera del if, vale: ' + d); // 4
-    console.log('e dentro de la funcion pero fuera del if, vale: ' + e); // 5
-    // console.log('f dentro de la funcion pero fuera del if, vale: ' + f); // error
+    console.log('e dentro de la funcion pero fuera del if, vale: ' + e); // 5 por variable hoisting
+    //console.log('f dentro de la funcion pero fuera del if, vale: ' + f); // error porque es let y no hay variable hoisting
+    
 }
 
 prueba(3);
 
+
 console.log('a vale: ' + a); // 1
 console.log('b vale: ' + b); // 2
-// console.log('c vale: ' + c); // error
-// console.log('d vale: ' + d); // error
-// console.log('e vale: ' + e); // error
-// console.log('f vale: ' + f); // error
-*/
+console.log('c vale: ' + c); // error
+console.log('d vale: ' + d); // error
+console.log('e vale: ' + e); // error
+console.log('f vale: ' + f); // error
+

@@ -32,6 +32,8 @@
     dentro. Y también cualquier tipo de valores: números, cadenas, objetos, incluso
     otros Arrays.
 
+    Primer posición es siempre 0
+
     Ejemplo:
 
     let animales = ['gato', 'perro', 'caballo'];
@@ -42,11 +44,13 @@
 // TAREA: Crea tu propio array, llamado comidasFavoritas, y escribi dentro algunas
 //       cosas que te gustan.
 
-
-
-
-
-
+// const comidasFavoritas = [
+//   "sushi",
+//   "helado",
+//   "asado",
+//   "papas fritas",
+//   "huevo frito",
+// ];
 
 /*
     Tamaño del Array
@@ -64,10 +68,8 @@
 // TAREA: Verifique cuántos valores tiene en su array comidasFavoritas.
 // imprimi utilizando console.log el resultado.
 
-
-
-
-
+// console.log(['sushi', 'helado', 'asado', 'papas fritas', 'huevo frito'].length);
+// console.log(comidasFavoritas.length);
 
 /*
     Uso del Array
@@ -90,10 +92,7 @@
 
 // TAREA: Obtené el tercer elemento de tu array comidasFavoritas e imprimilo utilizando console.log.
 
-
-
-
-
+// console.log(comidasFavoritas[2]);
 
 /*
     Cambio de Valores en Arrays
@@ -115,17 +114,11 @@
 // TAREA: Toma tu array de comidasFavoritas y reemplaza el primer valor
 // con cualquier otra cosa.
 
-
-
-
-
+// comidasFavoritas[0] = "platano frito";
 
 // TAREA: console.log todo el array para verificar.
 
-
-
-
-
+// console.log(comidasFavoritas);
 
 // TIP: ¡No te olvides que las posiciones de índice comienzan desde 0!
 
@@ -146,17 +139,10 @@
 
 // TAREA: Extendamos tu lista de comidasFavoritas y agreguemos un valor más.
 
-
-
-
-
+// comidasFavoritas.push("sushi");
 
 // TAREA: console.log todo el array para verificar.
-
-
-
-
-
+// console.log(comidasFavoritas);
 
 /*
     Nota acerca Arrays constantes
@@ -181,20 +167,16 @@
 
 // TAREA: Intenta crear un array como una constante y modifica los valores que contiene.
 
+// const pruebaArray = [1, 2, 3, 4];
+// pruebaArray[0] = 11;
+// pruebaArray.push(14);
 
-
-
-
-
+// let otraPruebaArraY = [1, 2, 3, 4];
+// otraPruebaArraY = [10, 11, 12, 13];
 
 // TAREA: Observa lo que sucede si agregas algo con.push(), cambias algo
 //       con notación de corchetes (array[1]) y
 //       asigna un nuevo array completamente nuevo a la constante
-
-
-
-
-
 
 /*
     Bucles
@@ -211,10 +193,16 @@
 
     Para esto usamos bucles.
 
-    Cada ciclo debe tener tres cosas principales:
+    Cada iteración debe tener tres cosas principales:
      - un punto de partida
      - una condición (punto final)
      - un contador (un paso)
+
+    imrpiman los primeros 100 números.
+    0/1
+    haber llegado a 100
+    aumentar contador en 1
+
 
      Si te olvidas uno de estos, ¡podes entrar en un bucle infinito!
 
@@ -246,10 +234,11 @@
 // TAREA: Usando un bucle 'while', decile a tu computadora que registre los números de
 //       diez a uno.
 
+/* let numero = 10;
 
-
-
-
+while (numero > 0) {
+  numero -= 1;
+} */
 
 /*
     Bucles for (para)
@@ -261,17 +250,39 @@
     Ejemplo:
 
     let i;
-    for (i = 0; i <= 5; i = i + 1) {  // (punto de partida; condicion; paso)
+    for (i = 0; i <= 5; i++) {  // (punto de partida; condicion; paso)
       console.log('Hola!');
     }
 */
 
 // TAREA: Imprimí cada 3er número del 3 al 22 usando un 'bucle for'.
 
+// let a;
+// for (a = 3; a <= 22; a += 3) {
+//   console.log(`${a}`);
+// }
 
+//Ejercicio
+let notaParciales = [10, 4, 5, 6, 8];
+// let totalNotas = 0;
+// for (let i=0; i < notaParciales.length; i++) {
+//     totalNotas = totalNotas + notaParciales[i];
+// }
 
+// console.log('El promedio de tus notas es ' + totalNotas / notaParciales.length);
 
+// TAREA: Hacer una función que se llame calcularPromedio que tome como parámetro un array
 
+function calcularPromedio(notaParciales) {
+  let totalNotas = 0;
+  for (let i = 0; i < notaParciales.length; i++) {
+    totalNotas = totalNotas + notaParciales[i];
+  }
+
+  let promedio = totalNotas / notaParciales.length;
+  console.log(`El promedio de tus notas es ${promedio}`);
+}
+calcularPromedio(notaParciales);
 
 /*
     Iterando a traves de Arrays
@@ -295,11 +306,6 @@
 */
 
 // TAREA: Probalo con tu comidasFavoritas array.
-
-
-
-
-
 
 /*
     Bucles y Logica
@@ -338,11 +344,6 @@
 // 10% 3 = 1 - en 10 tenemos 3 * 3 + 1
 // 16% 4 = 0 - en 16 tenemos 4 * 4
 // 19% 4 = 3 - en 19 tenemos 4 * 4 + 3, etc.
-
-
-
-
-
 
 //////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 2 de JavaScript Básico!            //

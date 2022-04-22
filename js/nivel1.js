@@ -20,7 +20,6 @@
     Cuando estás escribiendo código que querés que la máquina ejecute, ponelos AFUERA de los bloques de comentario.
 */
 
-
 /*
     Mostrando texto
     ===============
@@ -40,21 +39,23 @@
 
 // Tarea: Ahora te toca a vos! Acá abajo escribí una alerta que diga "Hola mundo!"
 
+//alert('Hola Mundo!');
 
 // Tarea: Una vez que la alerta funcione, comentala poniendo '//' en la línea donde está el código y guardá los cambios.
 // Una vez que recargás la página, ya no debería aparecer más.
 
-
 // Tarea: Ahora probá hacer un console.log de un mensaje que queramos.
 
+//  console.log('Prueba');
 
 // Consejo: Para recargar el navegador podemos apretar 'CMD + R' en Mac y 'CTRL + R' en
 //      Windows.
 
-
 // Consejo: El atajo del teclado para guardar cambios a un archivo es 'CMD + S' en Mac y 'CTRL + S' en
 //      Windows.
 
+// let nombreDeVariable;
+// console.log('nombreDeVariable es ' + nombreDeVariable);
 
 /*
     Variables
@@ -102,6 +103,8 @@
 
 // TAREA: Creá 2 variables indefinidas, llamadas numeroUno y numeroDos.
 
+// let numeroUno;
+// let numeroDos;
 
 /*
     Podés usar el nombre de tus variables pare representar qué información tienen adentro, por ejemplo:
@@ -115,17 +118,15 @@
 // Crear 2 variables nuevas, una con tu nombre, la segunda con tu edad. Dales un nombre apropriado y
 // mostralas con un alert.
 
-
 // Consejo: para mostrar 2 variables de texto al mismo tiempo, las podés unir usando el signo '+'. Ejemplo:
 
 /*
-* let nombre = 'Fabricio'
-* let apellido = 'Sodano'
-*
-* alert(nombre + apellido)
-*
-* */
-
+ * let nombre = 'Fabricio'
+ * let apellido = 'Sodano'
+ *
+ * alert(nombre + apellido)
+ *
+ * */
 
 /*
     Constantes
@@ -150,9 +151,10 @@
 
 // TAREA: Crear una constante y mostrarla con un alert
 
+// const IVA = 21;
+// alert(IVA);
 
 // TAREA: Intentar asignar un valor a una constante y ver qué pasa (mirar la consola)
-
 
 // Consejo: No te olvides de comentar (//) los alerts y los errores intencionales (como en la tarea anterior) para
 // que los alerts no aparezcan cada vez, y para que los errores no hagan que el programa se detenga.
@@ -161,7 +163,7 @@
     Matemática - Operadores aritméticos (sumas, restas, multiplicación y división)
     ============================
 
-    Hay muchos 'operadores' diferentes en programación. Veamos los operadores aritéticos ahora.
+    Hay muchos 'operadores' diferentes en programación. Veamos los operadores aritméticos ahora.
     JavaScript incluye operadores estándares (+, -, /, *) que se pueden usar para hacer operaciones matemáticas.
 
     Ejemplo:
@@ -183,6 +185,10 @@
 // la 1ra variable multiplicada (con el operador *) por la 2nda variable.
 // Mostrar el valor de resultadoMultiplicacion con un alert o un console.log
 
+// const diez = 10;
+// const tres = 3;
+// const resultadoMultiplicacion = diez * tres;
+// console.log(resultadoMultiplicacion);
 
 /*
     Funciones
@@ -232,6 +238,14 @@
          }
 */
 
+// function duplicar(numero) {
+//     return numero + numero;
+// }
+
+// console.log(duplicar(10));
+
+// console.log(duplicar(5));
+
 // TAREA: Es tu turno de crear una función!
 
 // Creá una función llamada 'sumar'
@@ -239,16 +253,85 @@
 // Escribí código para que devuelva (return) la suma de numero1 y numero2
 // Ejecutá la función sumar y mostrá su resultado en la consola
 
+// function sumar(numero1, numero2) {
+//     return numero1 + numero2;
+// }
+
+// console.log(sumar(3, 6));
 
 // TAREA: Ahora creemos otra función llamada 'restar'
 //       Que acepte 2 números como parámetro y los reste, y que devuelva ese valor.
 // Ejecutá la función con los números 5 y 1 y mostralos con console.log
 
+// function restar(numero1, numero2) {
+//   return numero1 - numero2;
+// }
+
+// console.log(restar(5, 1));
 
 // Consejo: Sabías que en vez de pasar los números directamente a tu función podés crear variables con esos números
 // y pasarlos como parámetros? Probalo!
 
+// let anioNacimiento = 1983;
+// let anioActual = 2022;
+
+// let miEdad = restar(anioActual, anioNacimiento);
+
+// console.log("Mi edad es " + miEdad);
+
+// let edadUsuario = prompt('Por favor, ingrese su edad: ', '30');
+
+// function saludar(nombre) {
+//   return "Hola " + nombre;
+// }
+
+// let miNombre = prompt("Cual es tu nombre?");
+// console.log(saludar(miNombre));
+
 // Consejo: Dejá las funciones como están, no las comentes, las vamos a usar de nuevo.
+
+// Crear una función que tome como parámetro el año actual y el año de nacimiento, y calcule la edad del usuario (más o menos).
+// Preguntarle estos datos al usuario, y guardarlos en 2 variables.
+// Ejecutar la función con estos datos.
+// Imprimir el resultado en la consola.
+
+// const anioActual = prompt('¿En qué año estamos?');
+// const anioNacimientoUsuario = prompt('Por favor, indica tu año de nacimiento: ');
+
+// function calcularEdadUsuario(anioActual, anioNacimientoUsuario){
+//     return anioActual - anioNacimientoUsuario;
+// }
+
+// console.log('Tu edad es ' + calcularEdadUsuario(anioActual, anioNacimientoUsuario));
+
+//Preguntar el salario anual y calcular el salario mensual.
+//Preguntar el salario mensual y calcular el anual.
+// diario... semanal.. por hora, etc.
+
+// const salarioAnual = Number(
+//     prompt('Ingresa tu salario anual: ')
+//     );
+
+// function calcularSalarioMensual(salarioAnual) {
+//     const mesesAnio = 12;
+//     return salarioAnual / mesesAnio;
+// }
+
+// console.log('Tu salario mensual es ' + calcularSalarioMensual(salarioAnual));
+
+// const salarioMensual = Number(
+//     prompt('Ingresa tu salario mensual: ')
+// );
+
+// function calcularSalarioAnual(salarioMensual) {
+//     const mesesAnio = 12;
+//     return salarioMensual * mesesAnio;
+// }
+
+// console.log('Tu salario anual es ' + calcularSalarioAnual(salarioMensual));
+
+//SINGLE RESPONSIBILITY PRINCIPLE
+//every module, class or function in a computer program should have responsibility over a single part of that program's functionality, and it should encapsulate that part.
 
 /*
     Condicionales If-Else
@@ -258,8 +341,7 @@
 
     "Si (if) tenés una televisión, podés mirarla. Si no (else), hacés otra cosa."
 
-    Es lo mismo con el código. Le podés dar una condición 'if' a una máquina para que haga una decisión acerca de qué
-    parte del código tiene que ejecutarse.
+    Es lo mismo con el código. Le podés dar una condición 'if' a una máquina para que haga una decisión acerca de qué parte del código tiene que ejecutarse.
 
     Estructura:
 
@@ -308,7 +390,7 @@
     Por ejemplo:
 
     3 < 4 evalúa a VERDADERO (TRUE), porque 3 es menor que 4.
-    1 + 1 === 3 evalía a FALSO (FALSE), porque 1 + 1 no es igual a 3.
+    1 + 1 === 3 evalúa a FALSO (FALSE), porque 1 + 1 no es igual a 3.
 */
 
 // TAREA: Tenemos 2 funciones de la tarea anterior -- 'sumar' y 'restar'
@@ -328,7 +410,6 @@
 //
 
 // TAREA: Cambiar el operador a '-', y fijarse que llame a la función 'restar' en vez de a la de 'sumar'.
-
 
 /*
     'If' - 'Else if' - 'Else'
@@ -360,9 +441,21 @@
 
 // TAREA: Creemos 2 funciones más: dividir y multiplicar.
 
+/* function sumar(numero1, numero2) {
+  return numero1 + numero2;
+}
 
+function restar(numero1, numero2) {
+  return numero1 - numero2;
+}
 
+function dividir(numero1, numero2) {
+  return numero1 / numero2;
+}
 
+function multiplicar(numero1, numero2) {
+  return numero1 * numero2;
+} */
 
 // TAREA: Reescribamos el if-else que teníamos y extendámolos, agregando:
 //       'else if' el 'operador' es igual a '-' - llamar a la función 'restar'
@@ -370,9 +463,26 @@
 //       'else if' el 'operador' es igual a '*' - llamar a la función 'multiplicar'.
 //       else console.log - "Perdón, no conozco ese operador".
 
+/* const operador = prompt("Ingrese operador (+,-,*, /)");
+const numero1 = Number(prompt("Ingrese un número"));
+const numero2 = Number(prompt("Ingrese otro número"));
 
+let resultado;
+if (operador === "+") {
+  resultado = sumar(numero1, numero2);
+} else if (operador === "-") {
+  resultado = restar(numero1, numero2);
+} else if (operador === "/") {
+  resultado = dividir(numero1, numero2);
+} else if (operador === "*") {
+  resultado = multiplicar(numero1, numero2);
+} else {
+  console.log(`No entiendo el operador ${operador}`);
+}
 
-
+console.log(
+  `El resultado de ${numero1} ${operador} ${numero2} es ${resultado}`
+); */
 
 /*
     Operadores Booleanos
@@ -397,10 +507,8 @@
     let maradonaMejorQuePele = true;
 */
 
-
 // TAREA: usando el operador !, Intentá invertir una variable (de true a false, o de false a true) e imprimí el
 // resultado en la consola.
-
 
 ////////////////////////////////////////////////////////////////////////////
 // Felicitaciones! Terminaste el Nivel 1 de la introducción a JavaScript! //
