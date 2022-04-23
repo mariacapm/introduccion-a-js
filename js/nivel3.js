@@ -143,6 +143,11 @@ nuestroTitulo.innerText = "Hola r/Argentina Programa!";
 */
 
 // TAREA: Obtené todos los elementos <li> de la página en una variable llamada mediaLinks.
+// TAREA: Ahora utilizá console.log para ver la cantidad de
+// elementos li que hay con mediaLinks.length
+
+// TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
+//      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 const mediaLinks = document.querySelectorAll("li");
 console.log(mediaLinks);
@@ -151,12 +156,6 @@ for (let i = 0; i < mediaLinks.length; i++) {
   console.log(mediaLinks[i].innerText);
   mediaLinks[i].innerText = "Hola";
 }
-
-// TAREA: Ahora utilizá console.log para ver la cantidad de
-// elementos li que hay con mediaLinks.length
-
-// TAREA: ¿Te acordás de los bucles del nivel 2? Usando lo que sabés de ellos, realizá iteraciones
-//      sobre cada item de mediaLinks y mostralos en pantalla con console.log
 
 /*
     Propiedades de los elementos
@@ -260,12 +259,11 @@ botonIngreso.onclick = function () {
   } else {
     textoResultado = "No podés ingresar";
   }
-
+  
   document.querySelector("#resultado").innerText = textoResultado;
 
   return false;
-};
-
+}
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //
 // Levántate, estira las piernas y celebra tu logro.                      //
