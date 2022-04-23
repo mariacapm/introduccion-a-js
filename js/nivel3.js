@@ -174,6 +174,9 @@ for (let i = 0; i < mediaLinks.length; i++) {
 // TAREA: Obtené el contenido de nuestro elemento 'h1'
 // y utilizá console.log para mostrarlo.
 
+const titulo = document.querySelector("h1");
+console.log(titulo.textContent);
+
 /*
     Editar el contenido de la página
     ====================
