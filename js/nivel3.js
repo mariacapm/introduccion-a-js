@@ -263,6 +263,15 @@ pieDePagina.style.fontFamily = 'Verdana, sans-serif';
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+const nodoTitulo = document.querySelector('h1');
+const nuevoDiv = document.createElement('div');
+const nuevaImagen = document.createElement('img');
+nuevaImagen.src = 'img/woman_bw.jpg';
+nodoTitulo.appendChild(nuevoDiv);
+nuevoDiv.appendChild(nuevaImagen);
+
+
+
 const botonIngreso = document.querySelector("#ingresar");
 
 botonIngreso.onclick = function () {
