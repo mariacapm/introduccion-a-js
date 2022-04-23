@@ -193,6 +193,8 @@ console.log(titulo.textContent);
 
 // TAREA: Hagamos un nuevo título! Cambiá el contenido de nuestro 'h1' y ponele lo que quieras.
 
+titulo.textContent = 'Bienvenido al curso de JavaScript r/Argentina Programa!';
+
 /*
     Editando atributos
     ==================
