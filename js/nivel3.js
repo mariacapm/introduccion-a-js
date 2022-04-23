@@ -233,6 +233,11 @@ kittens.src = "img/kittens.jpeg";
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
+const pieDePagina = document.querySelector('footer');
+pieDePagina.style.background = '#DA3296';
+pieDePagina.style.fontFamily = 'Verdana, sans-serif';
+
+
 /*
    Creando nuevos nodos (Elementos)
     =============================
