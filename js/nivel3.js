@@ -209,6 +209,10 @@ titulo.textContent = 'Bienvenido al curso de JavaScript r/Argentina Programa!';
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
+const kittens = document.querySelector('img');
+kittens.src = "img/kittens.jpeg";
+
+
 /*
     Editando estilos
     ==============
