@@ -30,3 +30,21 @@ botonEnviar.onclick = function(){
     return false;
 }
 
+const $botonCalcular = document.querySelector('#calcular-tiempo-total');
+
+$botonCalcular.onclick = function() {
+    const divisor = 60;
+    let totalSegundos = sumaSegundos % divisor;
+    let acumuladoMinutos = Math.trunc(sumaSegundos/60) + sumaMinutos;
+    let totalMinutos = acumuladoMinutos % divisor;
+    let totalHoras = sumaHoras + Math.trunc(sumaMinutos/60);
+    
+    document.querySelector('#resultado').removeAttribute('hidden');
+    document.querySelector('strong').innerHTML = `La duración total de los videos del curso es de ${totalHoras} horas, ${totalMinutos} minutos, ${totalSegundos} segundos.`;
+
+
+
+}
+
+
+
