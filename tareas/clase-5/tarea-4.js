@@ -6,3 +6,7 @@
 // 3. obtener el número más grande y mostrarlo en un <em> pre-creado con el texto "El número más grande es..."
 // 4. obtener el número que más se repite y mostrarlo en un <em> pre-creado con el texto "El número más frecuente es..."
 
+function mostrarElementosOcultos() {
+  const elementosOcultos = document.querySelectorAll(".hidden");
+  elementosOcultos.forEach((em) => (em.style.visibility = "visible"));
+}
