@@ -41,6 +41,18 @@ function mostrarElementosOcultos() {
   const elementosOcultos = document.querySelectorAll(".hidden");
   elementosOcultos.forEach((em) => (em.style.visibility = "visible"));
 }
+
+function calcularPromedio() {
+  let suma = 0;
+
+  for (let numero of arrayNumeros) {
+    suma += numero;
+  }
+
+  let promedio = suma / arrayNumeros.length;
+  document.querySelector("#promedio").innerText = promedio;
+}
+
 function calcularNumeroMasPequenio() {
   arrayNumeros.sort(function (a, b) {
     return a - b;
