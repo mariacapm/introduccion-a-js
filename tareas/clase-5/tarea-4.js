@@ -90,3 +90,9 @@ function calcularNumeroMasFrecuente() {
       "ningún número se repite";
   }
 }
+
+ingresarNumeros();
+calcularPromedio();
+calcularNumeroMasPequenio();
+calcularNumeroMasGrande();
+calcularNumeroMasFrecuente();
