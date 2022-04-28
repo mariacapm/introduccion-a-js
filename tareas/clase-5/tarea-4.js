@@ -68,3 +68,25 @@ function calcularNumeroMasGrande() {
   let numeroMasGrande = arrayNumeros[0];
   document.querySelector("#numero-mas-grande").innerText = numeroMasGrande;
 }
+
+function calcularNumeroMasFrecuente() {
+  let contador = 0;
+  let masFrecuente = 1;
+  let valor;
+  for (let i = 0; i < arrayNumeros.length; i++) {
+    for (let j = i; j < arrayNumeros.length; j++) {
+      if (arrayNumeros[i] === arrayNumeros[j]) contador++;
+      if (masFrecuente < contador) {
+        masFrecuente = contador;
+        valor = arrayNumeros[i];
+      }
+    }
+    contador = 0;
+  }
+  if (valor !== undefined) {
+    document.querySelector("#numero-mas-frecuente").innerText = valor;
+  } else {
+    document.querySelector("#numero-mas-frecuente").innerText =
+      "ningún número se repite";
+  }
+}
