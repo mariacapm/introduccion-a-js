@@ -41,3 +41,10 @@ function mostrarElementosOcultos() {
   const elementosOcultos = document.querySelectorAll(".hidden");
   elementosOcultos.forEach((em) => (em.style.visibility = "visible"));
 }
+function calcularNumeroMasGrande() {
+  arrayNumeros.sort(function (a, b) {
+    return b - a;
+  });
+  let numeroMasGrande = arrayNumeros[0];
+  document.querySelector("#numero-mas-grande").innerText = numeroMasGrande;
+}
