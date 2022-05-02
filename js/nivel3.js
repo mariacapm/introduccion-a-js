@@ -204,13 +204,12 @@ titulo.textContent = 'Bienvenido al curso de JavaScript r/Argentina Programa!';
     Ejemplo:
 
     const nuestroTwitter = document.querySelector('.twitter');
-    ourTwitter.id = "sorpresa";
+    ourTwitter.id = "sorpresa"; 
 */
 
 // TAREA: Actualizá el valor del atributo 'src' de nuestra etiqueta 'img' a "img/kittens.jpeg".
 
-const kittens = document.querySelector('img');
-kittens.src = "img/kittens.jpeg";
+document.querySelector('img').src = "img/kittens.jpeg";
 
 
 /*
@@ -233,9 +232,8 @@ kittens.src = "img/kittens.jpeg";
 
 // Tarea: Obtené cualquier elemento de la página y cambiale algunos estilos.
 
-const pieDePagina = document.querySelector('footer');
-pieDePagina.style.background = '#DA3296';
-pieDePagina.style.fontFamily = 'Verdana, sans-serif';
+document.querySelector('footer').style.backgroundColor = '#DA3296';
+document.querySelector('footer').style.fontFamily = 'Verdana, sans-serif';
 
 
 /*
@@ -263,30 +261,29 @@ pieDePagina.style.fontFamily = 'Verdana, sans-serif';
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
-const nodoTitulo = document.querySelector('h1');
-const nuevoDiv = document.createElement('div');
-const nuevaImagen = document.createElement('img');
-nuevaImagen.src = 'img/woman_bw.jpg';
-nodoTitulo.appendChild(nuevoDiv);
-nuevoDiv.appendChild(nuevaImagen);
+
+const nodoImagen = document.createElement('img');
+nodoImagen.src = 'img/woman_bw.jpg';
+document.querySelector('header').appendChild(nodoImagen);
 
 
 
-const botonIngreso = document.querySelector("#ingresar");
+// const botonIngreso = document.querySelector("#ingresar");
 
-botonIngreso.onclick = function () {
-  const edadUsuario = Number(document.querySelector("#edad-usuario").value);
-  let textoResultado;
-  if (edadUsuario >= 18) {
-    textoResultado = "Podés ingresar";
-  } else {
-    textoResultado = "No podés ingresar";
-  }
+// botonIngreso.onclick = function () {
+//   const edadUsuario = Number(document.querySelector("#edad-usuario").value);
+//   let textoResultado;
+//   if (edadUsuario >= 18) {
+//     textoResultado = "Podés ingresar";
+//   } else {
+//     textoResultado = "No podés ingresar";
+//   }
   
-  document.querySelector("#resultado").innerText = textoResultado;
+//   document.querySelector("#resultado").innerText = textoResultado;
 
-  return false;
-}
+//   return false;
+// }
+
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //
 // Levántate, estira las piernas y celebra tu logro.                      //
