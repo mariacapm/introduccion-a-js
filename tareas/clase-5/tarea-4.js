@@ -39,7 +39,7 @@ function mostrarElementosOcultos() {
 function calcularPromedio() {
   let suma = 0;
 
-  for (let numero of arrayNumeros) {
+  for (numero of arrayNumeros) {
     suma += numero;
   }
 
