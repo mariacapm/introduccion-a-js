@@ -87,8 +87,15 @@ function calcularNumeroMasFrecuente() {
   }
 }
 
-ingresarNumeros();
-calcularPromedio();
-calcularNumeroMasPequenio();
-calcularNumeroMasGrande();
-calcularNumeroMasFrecuente();
+
+
+document.querySelector("#calcular").onclick = function () {
+  mostrarElementosOcultos();
+  calcularPromedio();
+  calcularNumeroMasPequenio();
+  calcularNumeroMasGrande();
+  calcularNumeroMasFrecuente();
+  return false;
+};
+
+
