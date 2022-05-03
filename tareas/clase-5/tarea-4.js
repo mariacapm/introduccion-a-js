@@ -26,6 +26,10 @@ function crearElementoLista() {
   crearLista.appendChild(elementoLista);
 }
 
+function ingresarNumerosArray() {
+  arrayNumeros.push(numero);
+  document.querySelector("ol").lastChild.innerText = numero;
+}
 
 function mostrarElementosOcultos() {
   const elementosOcultos = document.querySelectorAll(".hidden");
