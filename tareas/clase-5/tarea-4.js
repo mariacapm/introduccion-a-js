@@ -47,6 +47,8 @@ function calcularPromedio() {
   document.querySelector("#promedio").innerText = promedio;
 }
 
+
+
 function calcularNumeroMasPequenio() {
   arrayNumeros.sort(function (a, b) {
     return a - b;
@@ -81,7 +83,7 @@ function calcularNumeroMasFrecuente() {
     document.querySelector("#numero-mas-frecuente").innerText = valor;
   } else {
     document.querySelector("#numero-mas-frecuente").innerText =
-      "ningún número se repite";
+      "ninguno. Ningún número se repite.";
   }
 }
 
