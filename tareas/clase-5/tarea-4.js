@@ -16,14 +16,15 @@ document.querySelector("#boton-enviar").onclick = function enviar() {
   return false;
 };
 
-      let elementoLista = document.createElement("li");
-      crearLista.appendChild(elementoLista);
-      elementoLista.innerText = number;
 
       preguntar();
     }
     mostrarElementosOcultos();
   }
+function crearElementoLista() {
+  let elementoLista = document.createElement("li");
+  let crearLista = document.querySelector("ol");
+  crearLista.appendChild(elementoLista);
 }
 
 
