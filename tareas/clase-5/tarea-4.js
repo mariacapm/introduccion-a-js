@@ -16,6 +16,9 @@ document.querySelector("#boton-enviar").onclick = function enviar() {
   return false;
 };
 
+function guardarNumero() {
+  numero = Number(document.querySelector("#numero").value);
+}
 
       preguntar();
     }
