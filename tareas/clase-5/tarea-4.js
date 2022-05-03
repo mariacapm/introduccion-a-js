@@ -20,10 +20,6 @@ function guardarNumero() {
   numero = Number(document.querySelector("#numero").value);
 }
 
-      preguntar();
-    }
-    mostrarElementosOcultos();
-  }
 function crearElementoLista() {
   let elementoLista = document.createElement("li");
   let crearLista = document.querySelector("ol");
