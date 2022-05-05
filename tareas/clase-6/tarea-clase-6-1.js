@@ -64,3 +64,11 @@ const $botonCalcular = document.querySelector("#boton-calcular");
 
 const $resultados = document.querySelector("#resultados");
 
+const arrayId = [];
+
+function obtenerNombreId() {
+  for (i = 1; i <= $cantidadGrupoFamiliar; i++) {
+    const id = "persona" + i;
+    arrayId.push(id);
+  }
+}
