@@ -84,3 +84,11 @@ function obtenerEdades() {
     arrayEdades.push(valorElemento);
   }
 }
+
+function calcularMenor() {
+  arrayEdades.sort(function (a, b) {
+    return a - b;
+  });
+  const menor = arrayEdades[0];
+  document.querySelector("#menor").insertAdjacentText("beforeend", menor);
+}
