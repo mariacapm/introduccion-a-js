@@ -119,3 +119,10 @@ function calcularPromedio() {
   let promedio = suma / arrayEdades.length;
   document.querySelector("#promedio").insertAdjacentText("beforeend", promedio);
 }
+
+const $botonResetear = document.querySelector("#boton-resetear");
+
+$botonResetear.onclick = function () {
+  location.reload();
+};
+
