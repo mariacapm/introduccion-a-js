@@ -6,6 +6,26 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
 
+const $botonEnviar = document.querySelector("#boton-enviar");
+
+let $cantidadGrupoFamiliar;
+
+$botonEnviar.onclick = function () {
+  $cantidadGrupoFamiliar = document.querySelector(
+    "#cantidad-miembros-familia"
+  ).value;
+
+  let i;
+  for (i = 1; i <= $cantidadGrupoFamiliar; i++) {
+    crearLabel(i);
+    crearInput(i);
+  }
+  quitarHidden($botonCalcular);
+  moverBotonCalcular();
+  deshabilitarBoton($botonEnviar);
+  return false;
+};
+
 function deshabilitarBoton(boton) {
   boton.setAttribute("disabled", "");
 }
