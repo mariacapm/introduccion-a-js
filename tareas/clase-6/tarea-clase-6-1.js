@@ -22,6 +22,10 @@ function crearLabel(i) {
   nodoLabel.before(saltoLinea);
 }
 
+function quitarHidden(elemento) {
+  elemento.removeAttribute("hidden");
+}
+
 function moverBotonCalcular() {
   document
     .querySelector("form")
