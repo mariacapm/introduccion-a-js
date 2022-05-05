@@ -72,3 +72,15 @@ function obtenerNombreId() {
     arrayId.push(id);
   }
 }
+
+let arrayEdades = [];
+
+function obtenerEdades() {
+  let nombreId;
+  let valorElemento;
+  for (i = 0; i < arrayId.length; i++) {
+    nombreId = arrayId[i];
+    valorElemento = Number(document.getElementById(nombreId).value);
+    arrayEdades.push(valorElemento);
+  }
+}
