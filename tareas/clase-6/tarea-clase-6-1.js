@@ -5,6 +5,11 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
+
+function deshabilitarBoton(boton) {
+  boton.setAttribute("disabled", "");
+}
+
 function crearInput(i) {
   const nodoInput = document.createElement("input");
   nodoInput.type = "number";
