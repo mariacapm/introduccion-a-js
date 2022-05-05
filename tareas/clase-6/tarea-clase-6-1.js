@@ -92,3 +92,11 @@ function calcularMenor() {
   const menor = arrayEdades[0];
   document.querySelector("#menor").insertAdjacentText("beforeend", menor);
 }
+
+function calcularMayor() {
+  arrayEdades.sort(function (a, b) {
+    return b - a;
+  });
+  const mayor = arrayEdades[0];
+  document.querySelector("#mayor").insertAdjacentText("beforeend", mayor);
+}
