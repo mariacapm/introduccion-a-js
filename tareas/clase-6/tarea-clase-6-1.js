@@ -34,3 +34,6 @@ function moverBotonCalcular() {
       document.getElementById("boton-calcular")
     );
 }
+
+const $botonCalcular = document.querySelector("#boton-calcular");
+
