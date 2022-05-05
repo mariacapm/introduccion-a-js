@@ -62,3 +62,5 @@ function moverBotonCalcular() {
 
 const $botonCalcular = document.querySelector("#boton-calcular");
 
+const $resultados = document.querySelector("#resultados");
+
