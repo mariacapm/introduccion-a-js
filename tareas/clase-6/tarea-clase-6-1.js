@@ -5,6 +5,14 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente la mayor edad
 
 Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuevamente, borrando los inputs ya creados (investigar cómo en MDN).
 */
+function crearInput(i) {
+  const nodoInput = document.createElement("input");
+  nodoInput.type = "number";
+  nodoInput.name = "persona" + i;
+  nodoInput.id = "persona" + i;
+  document.querySelector("form").appendChild(nodoInput);
+}
+
 function crearLabel(i) {
   const nodoLabel = document.createElement("label");
   nodoLabel.htmlFor = "persona" + i;
