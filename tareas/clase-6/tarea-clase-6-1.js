@@ -64,6 +64,15 @@ const $botonCalcular = document.querySelector("#boton-calcular");
 
 const $resultados = document.querySelector("#resultados");
 
+$botonCalcular.onclick = function () {
+  obtenerNombreId();
+  obtenerEdades();
+  quitarHidden($resultados);
+  calcularMayor();
+  calcularMenor();
+  calcularPromedio();
+};
+
 const arrayId = [];
 
 function obtenerNombreId() {
