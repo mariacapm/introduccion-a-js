@@ -100,3 +100,13 @@ function calcularMayor() {
   const mayor = arrayEdades[0];
   document.querySelector("#mayor").insertAdjacentText("beforeend", mayor);
 }
+
+function calcularPromedio() {
+  let suma = 0;
+  let edad;
+  for (edad of arrayEdades) {
+    suma += edad;
+  }
+  let promedio = suma / arrayEdades.length;
+  document.querySelector("#promedio").insertAdjacentText("beforeend", promedio);
+}
