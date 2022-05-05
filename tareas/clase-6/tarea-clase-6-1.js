@@ -22,3 +22,11 @@ function crearLabel(i) {
   nodoLabel.before(saltoLinea);
 }
 
+function moverBotonCalcular() {
+  document
+    .querySelector("form")
+    .insertAdjacentElement(
+      "beforeend",
+      document.getElementById("boton-calcular")
+    );
+}
