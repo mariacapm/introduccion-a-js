@@ -57,6 +57,9 @@ function eliminarUltimoHijo() {
   }
 }
 
+
+let cantidadInputs;
+
 function contarInputs() {
   let inputs = document.getElementsByTagName("input");
   cantidadInputs = inputs.length;
