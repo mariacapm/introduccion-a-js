@@ -23,6 +23,19 @@ aniadir.onclick = function () {
   }
   return false;
 };
+
+const quitar = document.querySelector("#quitar");
+
+quitar.onclick = function () {
+  if (contador >= 1) {
+    contador--;
+    eliminarUltimoHijo();
+    eliminarUltimoHijo();
+  } else {
+    contador = 1;
+  }
+};
+
 function crearLabel() {
   const nodoLabel = document.createElement("label");
   nodoLabel.htmlFor = "salario" + contador;
