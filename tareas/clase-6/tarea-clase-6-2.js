@@ -37,3 +37,10 @@ function crearInput() {
   document.querySelector("div").appendChild(nodoInput);
 }
 
+function eliminarUltimoHijo() {
+  const div = document.querySelector("div");
+  if (div.hasChildNodes()) {
+    div.removeChild(div.lastChild);
+  }
+}
+
