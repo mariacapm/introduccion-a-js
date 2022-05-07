@@ -103,3 +103,13 @@ function calcularPromedioAnual() {
     .querySelector("#promedio-anual")
     .insertAdjacentText("beforeend", promedioAnual);
 }
+
+const ANIO = 12;
+
+function calcularPromedioMensual() {
+  const promedioMensual = promedioAnual / ANIO;
+  document
+    .querySelector("#promedio-mensual")
+    .insertAdjacentText("beforeend", promedioMensual);
+}
+
