@@ -82,3 +82,13 @@ function calcularMayor() {
     .insertAdjacentText("beforeend", mayorSalario);
 }
 
+function calcularMenor() {
+  arraySalarios.sort(function (a, b) {
+    return a - b;
+  });
+  const menorSalario = arraySalarios[0];
+  document
+    .querySelector("#menor")
+    .insertAdjacentText("beforeend", menorSalario);
+}
+
