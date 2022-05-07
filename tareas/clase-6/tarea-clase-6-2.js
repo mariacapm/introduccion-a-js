@@ -6,3 +6,17 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor sala
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
 
+function crearLabel() {
+  const nodoLabel = document.createElement("label");
+  nodoLabel.htmlFor = "salario" + contador;
+  nodoLabel.innerText = "Integrante " + contador + ":";
+  document.querySelector("div").appendChild(nodoLabel);
+}
+
+function crearInput() {
+  const nodoInput = document.createElement("input");
+  nodoInput.id = "salario" + contador;
+  nodoInput.type = "number";
+  document.querySelector("div").appendChild(nodoInput);
+}
+
