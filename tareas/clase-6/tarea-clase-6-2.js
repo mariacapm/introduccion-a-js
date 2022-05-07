@@ -92,3 +92,14 @@ function calcularMenor() {
     .insertAdjacentText("beforeend", menorSalario);
 }
 
+let promedioAnual;
+function calcularPromedioAnual() {
+  let suma = 0;
+  for (i = 0; i < arraySalarios.length; i++) {
+    suma += arraySalarios[i];
+  }
+  promedioAnual = suma / arraySalarios.length;
+  document
+    .querySelector("#promedio-anual")
+    .insertAdjacentText("beforeend", promedioAnual);
+}
