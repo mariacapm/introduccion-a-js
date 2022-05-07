@@ -72,6 +72,11 @@ function crearArray() {
     }
   }
 }
+
+function quitarHidden() {
+  document.querySelector("main").removeAttribute("hidden");
+}
+
 function calcularMayor() {
   arraySalarios.sort(function (a, b) {
     return b - a;
