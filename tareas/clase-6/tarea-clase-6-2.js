@@ -57,6 +57,20 @@ function eliminarUltimoHijo() {
   }
 }
 
+let arraySalarios = [];
+
+const botonCalcular = document.querySelector("#calcular");
+
+botonCalcular.onclick = function () {
+  contarInputs();
+  crearArray();
+  quitarHidden();
+  calcularMayor();
+  calcularMenor();
+  calcularPromedioAnual();
+  calcularPromedioMensual();
+  deshabilitarBoton(botonCalcular);
+};
 
 let cantidadInputs;
 
