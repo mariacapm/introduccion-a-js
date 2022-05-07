@@ -113,3 +113,6 @@ function calcularPromedioMensual() {
     .insertAdjacentText("beforeend", promedioMensual);
 }
 
+function deshabilitarBoton(boton) {
+  boton.setAttribute("disabled", "");
+}
