@@ -62,3 +62,13 @@ function contarInputs() {
   cantidadInputs = inputs.length;
 }
 
+function crearArray() {
+  let salario;
+  for (let i = 1; i <= cantidadInputs; i++) {
+    const nombreId = document.querySelector("#salario" + i);
+    salario = Number(nombreId.value);
+    if (salario !== null && salario !== "" && salario !== 0) {
+      arraySalarios.push(salario);
+    }
+  }
+}
