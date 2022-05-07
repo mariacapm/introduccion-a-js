@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4 - Clase 5</title>
+    <link rel="stylesheet" href="tarea-4.css">
+</head>
+<body>
+    <h1>Vamos a crear una lista de números</h1>
+    <p>Ingresa un número y haz clic en Enviar. Puedes hacerlo tantas veces como quieras.</p>
+    <p>Cuando hayas terminado, haz clic en Calcular</p>
+
+    <form>
+        <label for="numero">Ingresa un número</label>
+        <input type="numero" id="numero">  
+        <button type="submit" id="boton-enviar">Enviar</button>
+        <button type="button" id="calcular">Calcular</button>
+    </form>
+    <ol>
+        
+    </ol>
+
+    <div class="hidden">
+        <p>El promedio es <em id="promedio"> </em></p>
+    </div>
+    <div class="hidden">
+        <p>El número más pequeño es <em id="numero-mas-pequenio"> </em></p>
+    </div>
+    <div class="hidden">
+        <p>El número más grande es <em id="numero-mas-grande"></em></p>
+    </div>
+    <div class="hidden">
+        <p>El número más frecuente es <em id="numero-mas-frecuente"> </em></p>
+    </div>
+
+    <script src="tarea-4.js"></script>
+</body>
+</html>

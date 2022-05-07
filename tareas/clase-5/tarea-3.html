@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 - Clase 5</title>
+    <link rel="stylesheet" href="tarea-3.css">
+</head>
+<body>
+
+    <header>
+        <h1>Duración de las clases de r/Argentina Programa</h1>
+    </header>
+    <main>
+        <p>Por favor, ingresa la duración de cada clase del curso:</p>
+
+        <form>
+            <input type="number" name="clase-horas" id="clase-horas" min="0" max="999"> horas
+            <input type="number" name="clase-minutos" id="clase-minutos" min="0" max="60"> minutos
+            <input type="number" name="clase-segundos" id="clase-segundos" min="0" max="60"> segundos
+            <button type="submit" id="enviar">Enviar</button>
+            <button type="reset" id="resetear">Resetear contador</button>
+        </form>
+
+        <p>Cuando hayas terminado de ingresar la duración de todas las clases, haz click aqui para calcular la duración total del curso:</p>
+        <button type="submit" id="calcular-tiempo-total">Calcular tiempo total</button>
+        <div id="resultado" hidden>
+        <p><strong></strong></p>
+        </div>
+
+
+    </main>
+    
+    <script src="tarea-3.js"></script>
+</body>
+</html>

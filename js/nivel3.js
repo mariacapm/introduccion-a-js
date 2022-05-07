@@ -261,6 +261,7 @@ document.querySelector('footer').style.fontFamily = 'Verdana, sans-serif';
 //
 // P.S. También les podés dar estilos al nuevo nodo que creaste.
 
+
 const nodoImagen = document.createElement('img');
 nodoImagen.src = 'img/woman_bw.jpg';
 document.querySelector('header').appendChild(nodoImagen);
@@ -282,6 +283,7 @@ document.querySelector('header').appendChild(nodoImagen);
 
 //   return false;
 // }
+
 ////////////////////////////////////////////////////////////////////////////
 // ¡Felicidades! ¡Has terminado el Nivel 3 de JavaScript Básico!          //
 // Levántate, estira las piernas y celebra tu logro.                      //
