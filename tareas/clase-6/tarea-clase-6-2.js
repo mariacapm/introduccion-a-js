@@ -72,3 +72,13 @@ function crearArray() {
     }
   }
 }
+function calcularMayor() {
+  arraySalarios.sort(function (a, b) {
+    return b - a;
+  });
+  const mayorSalario = arraySalarios[0];
+  document
+    .querySelector("#mayor")
+    .insertAdjacentText("beforeend", mayorSalario);
+}
+
