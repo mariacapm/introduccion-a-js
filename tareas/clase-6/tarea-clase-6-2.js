@@ -57,3 +57,8 @@ function eliminarUltimoHijo() {
   }
 }
 
+function contarInputs() {
+  let inputs = document.getElementsByTagName("input");
+  cantidadInputs = inputs.length;
+}
+
