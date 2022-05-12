@@ -39,4 +39,12 @@ function validarTextos(texto) {
   return "";
 }
 
+function validarEdad(edad) {
+  if (edad === 0) {
+    return "El campo edad no puede ser igual a 0";
+  }
+  if (edad === "") {
+    return "El campo edad no puede estar vacío";
+  }
+  return "";
 }
