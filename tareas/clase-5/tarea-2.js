@@ -5,19 +5,38 @@
 // mostrar toda la información junta en un campo de texto
 // Y va a cambiar el <h1> para decir "Bienvenido, nombreDeUsuario"!
 
-const botonEnviar = document.querySelector('button');
+const botonEnviar = document.querySelector("button");
 
 botonEnviar.onclick = function () {
-    const primerNombre = document.querySelector('#primer-nombre').value;
-    const segundoNombre = document.querySelector('#segundo-nombre').value;
-    const apellido = document.querySelector('#apellido').value;
-    const edad = document.querySelector('#edad').value;
+  const primerNombre = document.querySelector("#primer-nombre").value;
+  const segundoNombre = document.querySelector("#segundo-nombre").value;
+  const apellido = document.querySelector("#apellido").value;
+  const edad = document.querySelector("#edad").value;
 
-    const datosUsuario = `${primerNombre} ${segundoNombre} ${apellido}. Edad: ${edad}`;
-    document.querySelector('textarea').removeAttribute('hidden');
-    document.querySelector('textarea').innerText = datosUsuario;
+  const datosUsuario = `${primerNombre} ${segundoNombre} ${apellido}. Edad: ${edad}`;
+  document.querySelector("textarea").removeAttribute("hidden");
+  document.querySelector("textarea").innerText = datosUsuario;
 
-    document.querySelector('h1').innerText = `Bienvenido, ${primerNombre} ${segundoNombre} ${apellido}!`;
+  document.querySelector(
+    "h1"
+  ).innerText = `Bienvenido, ${primerNombre} ${segundoNombre} ${apellido}!`;
 
-    return false;
+  return false;
+};
+
+function validarTextos(texto) {
+  if (texto === "") {
+    return "El campo no puede estar vacío";
+  }
+
+  if (texto.length <= 1) {
+    return "El campo debe tener más de un caracter";
+  }
+
+  if (!isNaN(texto)) {
+    return "El valor ingresado no es un texto";
+  }
+  return "";
+}
+
 }
