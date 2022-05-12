@@ -26,6 +26,17 @@ $botonEnviar.onclick = function () {
   return false;
 };
 
+function validarCantidadGrupoFamiliar($cantidadGrupoFamiliar) {
+  if($cantidadGrupoFamiliar === '') {
+    return 'Este campo no puede estar vacio';
+  }
+
+  if($cantidadGrupoFamiliar === 0) {
+    return 'El grupo familiar debe tener al menos un integrante';
+  }
+  return '';
+}
+
 function deshabilitarBoton(boton) {
   boton.setAttribute("disabled", "");
 }
@@ -102,12 +113,34 @@ function calcularMenor() {
   document.querySelector("#menor").insertAdjacentText("beforeend", menor);
 }
 
+function validarCalcularMenor(arrayEdades) {
+  if(arrayEdades[0] > arrayEdades[1]) {
+    return 'CalcularMenor no está calculando bien el número menor';
+  }
+
+  if(arrayEdades[0] === arrayEdades[1]) {
+    return 'El menor número está repetido';
+  }
+  return '';
+}
+
 function calcularMayor() {
   arrayEdades.sort(function (a, b) {
     return b - a;
   });
   const mayor = arrayEdades[0];
   document.querySelector("#mayor").insertAdjacentText("beforeend", mayor);
+}
+
+function validarCalcularMayor(arrayEdades) {
+  if(arrayEdades[0] < arrayEdades[1]) {
+    return 'CalcularMayor no está calculando bien el número mayor';
+  }
+
+  if(arrayEdades[0] === arrayEdades[1]) {
+    return 'El mayor número está repetido';
+  }
+  return '';
 }
 
 function calcularPromedio() {
@@ -118,6 +151,16 @@ function calcularPromedio() {
   }
   let promedio = suma / arrayEdades.length;
   document.querySelector("#promedio").insertAdjacentText("beforeend", promedio);
+}
+
+function validarPromedio(promedio) {
+  if(promedio === 0) {
+    return 'El promedio no puede dar cero.'
+  }
+  if(promedio === '') {
+    return 'El promedio no puede estar vacío.'
+  }
+  return '';
 }
 
 const $botonResetear = document.querySelector("#boton-resetear");
